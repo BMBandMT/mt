@@ -1,0 +1,28 @@
+#slice-id-home-hero {
+  position: relative;
+  section {
+    .basic-slice-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 860px;
+      .section-content {
+        max-width: 560px;
+        margin: 0px;
+      }
+      h2 {
+        color: white;
+        font-size: 55px;
+        line-height: 55px;
+      }
+      p {
+        color: white;
+        font-size: 18px;
+        line-height: 22px;
+      }
+      a {
+        @include cta-button();
+      }
+    }
+  }
+}
