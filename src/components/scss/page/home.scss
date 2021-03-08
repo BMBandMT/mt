@@ -26,3 +26,98 @@
     }
   }
 }
+#slice-id-home-patner {
+  section {
+    padding: 75px 0px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    a {
+      @include cta-button();
+    }
+  }
+}
+#slice-id-home-growth {
+  .column {
+    .column-item {
+      overflow: visible;
+    }
+    align-items: center;
+    .block-img {
+      max-width: 500px;
+      background-color: rgba(35, 164, 85, 0.5);
+      padding: 25px 0px;
+      position: relative;
+      left: -65px;
+      img {
+        position: relative;
+        right: -65px;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+#slice-id-home-cost {
+  .column {
+    .column-item {
+      overflow: visible;
+    }
+    align-items: center;
+    .block-img {
+      max-width: 500px;
+      background-color: rgba(35, 164, 85, 0.5);
+      padding: 25px 0px;
+      position: relative;
+      right: -65px;
+      img {
+        position: relative;
+        left: -65px;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+#slice-id-home-community {
+  .column {
+    .column-item {
+      overflow: visible;
+    }
+    align-items: center;
+    .block-img {
+      max-width: 500px;
+      background-color: rgba(35, 164, 85, 0.5);
+      padding: 25px 0px;
+      position: relative;
+      left: -65px;
+      img {
+        position: relative;
+        right: -65px;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+
+#slice-id-home-videeo {
+  section {
+    padding: 90px 0px;
+  }
+  .basic-slice-container {
+    max-width: 730px;
+  }
+  .embed > div {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

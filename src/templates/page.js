@@ -333,7 +333,11 @@ export const postQuery = graphql`
                             }
                             background_image {
                               localFile {
-                                url
+                                childImageSharp {
+                                  fluid(maxWidth: 1920) {
+                                    ...GatsbyImageSharpFluid
+                                  }
+                                }
                               }
                             }
                             column_count

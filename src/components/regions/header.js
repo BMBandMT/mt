@@ -35,8 +35,8 @@ const HeaderStyle = styled.header`
     padding-bottom: 18px;
   }
   .logo {
-    max-width: 95px;
-    width: 95px;
+    max-width: 381px;
+    width: 381px;
     img {
       max-width: 100%;
     }
@@ -54,15 +54,15 @@ const HeaderStyle = styled.header`
     padding: 0px;
     li {
       list-style: none;
-      margin-right: 40px;
+      margin-right: 50px;
       position: relative;
       &:last-child {
         margin-right: 0px;
         a {
           background: white;
           color: ${variable.green};
-          padding: 9px 12px;
-          border-radius: 10px;
+          padding: 9px 20px;
+          border-radius: 15px;
           &:hover {
             background: ${variable.green};
             color: white;
@@ -75,7 +75,7 @@ const HeaderStyle = styled.header`
       a {
         text-decoration: none;
         color: white;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
         &:hover {
           color: ${variable.green};

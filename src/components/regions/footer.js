@@ -19,7 +19,7 @@ const FooterStyle = styled.footer`
       flex-direction: column;
     }
     .logo {
-      width: 80px;
+      width: 311px;
     }
     ul.footer-main-menu {
       width: calc(100% - 120px);
@@ -44,7 +44,8 @@ const FooterStyle = styled.footer`
       a {
         color: white;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 20px;
+        font-weight: bold;
       }
     }
   }
@@ -52,7 +53,7 @@ const FooterStyle = styled.footer`
     color: white;
     opacity: 50%;
     margin-top: 40px;
-    font-size: 14px;
+    font-size: 18px;
     @media (max-width: ${variable.mobileWidth}) {
       text-align: center;
     }
@@ -60,7 +61,7 @@ const FooterStyle = styled.footer`
   .footer-border {
     width: 100%;
     height: 2px;
-    background-color: #707070;
+    background-color: #383737;
   }
 `
 const activeStyle = {
