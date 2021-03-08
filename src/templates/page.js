@@ -64,19 +64,19 @@ const PostSlices = ({ slices, blog }) => {
             </div>
           )
 
-        case "block_reference":
-          const BlockReferenceSlice = loadable(() =>
-            import(`../components/slices/BlockReferenceSlice`)
-          )
-          return (
-            <div
-              id={"slice-id-" + sliceID}
-              key={index}
-              className="slice-wrapper slice-block-reference"
-            >
-              {<BlockReferenceSlice slice={slice} />}
-            </div>
-          )
+        // case "block_reference":
+        //   const BlockReferenceSlice = loadable(() =>
+        //     import(`../components/slices/BlockReferenceSlice`)
+        //   )
+        //   return (
+        //     <div
+        //       id={"slice-id-" + sliceID}
+        //       key={index}
+        //       className="slice-wrapper slice-block-reference"
+        //     >
+        //       {<BlockReferenceSlice slice={slice} />}
+        //     </div>
+        //   )
 
         case "entity_query":
           const EntityQuerySlice = loadable(() =>

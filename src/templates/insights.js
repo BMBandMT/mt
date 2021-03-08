@@ -273,7 +273,7 @@ export const postQuery = graphql`
         }
       }
     }
-    blogbg: file(relativePath: { eq: "defaultheader.png" }) {
+    blogbg: file(relativePath: { eq: "Pageheader.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -299,7 +299,7 @@ export const postQuery = graphql`
       }
     }
     defaultBlock: prismicBlocks(
-      id: { eq: "48b37aa4-1796-5b39-bea6-1df89eeb303e" }
+      id: { eq: "a5bd7863-3e51-5068-b4ea-b1c71bbddde9" }
     ) {
       data {
         body {

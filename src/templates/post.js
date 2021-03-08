@@ -297,7 +297,7 @@ export default Post
 export const postQuery = graphql`
   query PostBySlug($uid: String!) {
     defaultBlock: prismicBlocks(
-      id: { eq: "48b37aa4-1796-5b39-bea6-1df89eeb303e" }
+      id: { eq: "a5bd7863-3e51-5068-b4ea-b1c71bbddde9" }
     ) {
       data {
         body {
