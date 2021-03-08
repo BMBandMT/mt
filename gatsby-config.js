@@ -40,7 +40,7 @@ module.exports = {
           // Return true to download the image or false to skip.
           return true
         },
-        linkResolver: ({ node, key, value }) => (doc) => {
+        linkResolver: ({ node, key, value }) => doc => {
           // Your link resolver
           if (doc.type === "blog_post") {
             return "/blog/" + doc.uid
@@ -120,36 +120,36 @@ module.exports = {
         icon: `src/images/fav.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: "./src/images/fav.png",
+    // {
+    //   resolve: `gatsby-plugin-favicon`,
+    //   options: {
+    //     logo: "./src/images/fav.png",
 
-        // WebApp Manifest Configuration
-        appName: null, // Inferred with your package.json
-        appDescription: null,
-        developerName: null,
-        developerURL: null,
-        dir: "auto",
-        lang: "en-US",
-        background: "#fff",
-        theme_color: "#fff",
-        display: "standalone",
-        orientation: "any",
-        version: "1.0",
+    //     // WebApp Manifest Configuration
+    //     appName: null, // Inferred with your package.json
+    //     appDescription: null,
+    //     developerName: null,
+    //     developerURL: null,
+    //     dir: "auto",
+    //     lang: "en-US",
+    //     background: "#fff",
+    //     theme_color: "#fff",
+    //     display: "standalone",
+    //     orientation: "any",
+    //     version: "1.0",
 
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          yandex: false,
-          windows: false,
-        },
-      },
-    },
+    //     icons: {
+    //       android: true,
+    //       appleIcon: true,
+    //       appleStartup: true,
+    //       coast: false,
+    //       favicons: true,
+    //       firefox: true,
+    //       yandex: false,
+    //       windows: false,
+    //     },
+    //   },
+    // },
     `gatsby-plugin-preload-fonts`,
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -189,7 +189,7 @@ module.exports = {
         },
         serialize: ({ site, allPrismicPa, allPrismicBlogPost }) => {
           let pages = []
-          allPrismicPa.nodes.map((edge) => {
+          allPrismicPa.nodes.map(edge => {
             if (edge.data.donotindex != true) {
               if (edge.uid != "home") {
                 pages.push({
@@ -200,7 +200,7 @@ module.exports = {
               }
             }
           })
-          allPrismicBlogPost.nodes.map((edge) => {
+          allPrismicBlogPost.nodes.map(edge => {
             pages.push({
               url: `${site.siteMetadata.siteUrl}/blog/${edge.uid}`,
               changefreq: `daily`,
