@@ -17,6 +17,7 @@
     "@wardpeet/gatsby-image-nextgen": "0.0.2",
     "animate.css": "^4.1.1",
     "babel-preset-gatsby": "^0.5.14",
+    "framer-motion": "^3.10.5",
     "gatsby": "^2.19.12",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-background-image": "^0.9.14",

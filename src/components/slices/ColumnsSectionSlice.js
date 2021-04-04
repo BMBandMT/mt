@@ -6,7 +6,8 @@ import { RichText } from "prismic-reactjs"
 import * as variable from "../variables"
 import linkResolver from "../../utils/linkResolver"
 import prismicHtmlSerializer from "../../gatsby/htmlSerializer"
-
+import "animate.css/animate.min.css"
+import ScrollAnimation from "react-animate-on-scroll"
 const ColumnStyle = styled.div`
   .column {
     display: flex;
@@ -61,6 +62,7 @@ const ColumnStyle = styled.div`
 `
 
 function ColumnsSectionSlice({ slice }) {
+  const shouldShowActions = false
   var fluid = null
   var bgColor = null
   var columnCount = null
@@ -111,23 +113,25 @@ function ColumnsSectionSlice({ slice }) {
           style={{ backgroundColor: slice.primary.background_color }}
         >
           <Container>
-            <section>
-              {slice.primary.section_title.text && (
-                <h2>{slice.primary.section_title.text}</h2>
-              )}
-              <div className={"column column-count-" + columnCount}>
-                {items &&
-                  items.map((item, index) => (
-                    <div key={index} className="column-item">
-                      <RichText
-                        render={item.content.raw}
-                        linkResolver={linkResolver}
-                        htmlSerializer={prismicHtmlSerializer}
-                      />
-                    </div>
-                  ))}
-              </div>
-            </section>
+            <ScrollAnimation
+              animateIn="animate__zoomInLeft"
+              animateOnce={false}
+            >
+              <section>
+                <div className={"column column-count-" + columnCount}>
+                  {items &&
+                    items.map((item, index) => (
+                      <div key={index} className="column-item">
+                        <RichText
+                          render={item.content.raw}
+                          linkResolver={linkResolver}
+                          htmlSerializer={prismicHtmlSerializer}
+                        />
+                      </div>
+                    ))}
+                </div>
+              </section>
+            </ScrollAnimation>
           </Container>
         </ColumnStyle>
       )}
