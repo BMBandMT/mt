@@ -121,3 +121,14 @@
     }
   }
 }
+#slice-id-home-cta{
+  section {
+    padding: 75px 0px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    a {
+      @include cta-button();
+    }
+  }
+}

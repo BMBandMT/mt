@@ -13,7 +13,7 @@ import Img from "gatsby-image"
 // import BasicSectionSlice from "../components/slices/BasicSectionSlice"
 import BackgroundImage from "gatsby-background-image"
 import loadable from "@loadable/component"
-import leaves from "../images/twoleavesnew.png"
+import leaves from "../images/bloglogo.png"
 import facebookIcon from "../images/facebook.png"
 import linkedinIcon from "../images/linkedin.png"
 import twitterIcon from "../images/twitter.png"
@@ -75,6 +75,19 @@ const PostSlices = ({ slices, id }) => {
               className="slice-wrapper slice-basic"
             >
               {<BasicSectionSlice slice={slice} />}
+            </div>
+          )
+        case "columns_section":
+          const ColumnSectionSlice = loadable(() =>
+            import(`../components/slices/ColumnsSectionSlice`)
+          )
+          return (
+            <div
+              id={"slice-id-" + slice.primary.slice_id.text}
+              key={index}
+              className="slice-wrapper slice-columns"
+            >
+              {<ColumnSectionSlice slice={slice} />}
             </div>
           )
         default:
@@ -156,17 +169,17 @@ const PageStyle = styled.div`
     }
   }
   .blog-line {
-    width: 83px;
-    height: 3px;
-    background-color: ${variable.blue};
+    width: 52px;
+    height: 5px;
+    background-color: ${variable.green};
     margin-bottom: 40px;
   }
   .two-leaves {
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 150px;
+    margin-bottom: 240px;
     img {
-      width: 198px;
+      width: 86px;
       height: auto;
     }
   }
@@ -296,11 +309,39 @@ export default Post
 
 export const postQuery = graphql`
   query PostBySlug($uid: String!) {
-    defaultBlock: prismicBlocks(
-      id: { eq: "a5bd7863-3e51-5068-b4ea-b1c71bbddde9" }
-    ) {
+    defaultBlock: prismicBlocks(uid: { eq: "global-contact" }) {
       data {
         body {
+          ... on PrismicBlocksBodyColumnsSection {
+            id
+            slice_type
+            primary {
+              background_color
+              slice_id {
+                text
+              }
+              background_image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1920) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+              column_count
+              font_color
+              h1_title
+              section_title {
+                text
+              }
+            }
+            items {
+              content {
+                raw
+              }
+            }
+          }
           ... on PrismicBlocksBodyBasicSection {
             id
             slice_type
@@ -348,7 +389,7 @@ export const postQuery = graphql`
         }
       }
     }
-    blogbg: file(relativePath: { eq: "defaultheader.png" }) {
+    blogbg: file(relativePath: { eq: "Pageheaderblog.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
