@@ -130,7 +130,7 @@ const InsightsHeader = styled.div`
     font-weight: 800;
     font-size: 60px;
     line-height: 90px;
-    color: #005b90 !important;
+    color: #ffffff !important;
   }
   .hero-flex {
     min-height: 350px;
@@ -148,6 +148,7 @@ const EntityResult = ({ blog }) => {
 // Sort and display the different slice options
 const PostSlices = ({ slices, id }) => {
   return slices.map((slice, index) => {
+    console.log(slice)
     const res = (() => {
       switch (slice.slice_type) {
         case "basic_section":
@@ -161,6 +162,19 @@ const PostSlices = ({ slices, id }) => {
               className="slice-wrapper slice-basic"
             >
               {<BasicSectionSlice slice={slice} />}
+            </div>
+          )
+        case "columns_section":
+          const ColumnSectionSlice = loadable(() =>
+            import(`../components/slices/ColumnsSectionSlice`)
+          )
+          return (
+            <div
+              id={"slice-id-" + slice.primary.slice_id.text}
+              key={index}
+              className="slice-wrapper slice-columns"
+            >
+              {<ColumnSectionSlice slice={slice} />}
             </div>
           )
         default:
@@ -178,6 +192,8 @@ const Post = props => {
   // const site = props.data.site
   var min_height = 350
   const defaultBlock = props.data.defaultBlock.data
+
+  console.log(defaultBlock)
 
   // const defaultBlock = props.data.prismic.allBlocks.edges[0].node
   // const site = props.data.prismic.allSite_informations.edges[0].node
@@ -298,11 +314,39 @@ export const postQuery = graphql`
         }
       }
     }
-    defaultBlock: prismicBlocks(
-      id: { eq: "a5bd7863-3e51-5068-b4ea-b1c71bbddde9" }
-    ) {
+    defaultBlock: prismicBlocks(uid: { eq: "global-contact" }) {
       data {
         body {
+          ... on PrismicBlocksBodyColumnsSection {
+            id
+            slice_type
+            primary {
+              background_color
+              slice_id {
+                text
+              }
+              background_image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1920) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+              column_count
+              font_color
+              h1_title
+              section_title {
+                text
+              }
+            }
+            items {
+              content {
+                raw
+              }
+            }
+          }
           ... on PrismicBlocksBodyBasicSection {
             id
             slice_type

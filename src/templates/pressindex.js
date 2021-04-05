@@ -130,7 +130,7 @@ const InsightsHeader = styled.div`
     font-weight: 800;
     font-size: 60px;
     line-height: 90px;
-    color: #005b90 !important;
+    color: #ffffff !important;
   }
   .hero-flex {
     min-height: 350px;
@@ -163,6 +163,19 @@ const PostSlices = ({ slices, id }) => {
               {<BasicSectionSlice slice={slice} />}
             </div>
           )
+        case "columns_section":
+          const ColumnSectionSlice = loadable(() =>
+            import(`../components/slices/ColumnsSectionSlice`)
+          )
+          return (
+            <div
+              id={"slice-id-" + slice.primary.slice_id.text}
+              key={index}
+              className="slice-wrapper slice-columns"
+            >
+              {<ColumnSectionSlice slice={slice} />}
+            </div>
+          )
         default:
           return
       }
@@ -177,6 +190,7 @@ const Post = props => {
   // const node = props.data.page.data
   // const site = props.data.site
   var min_height = 350
+  console.log(props)
   const defaultBlock = props.data.defaultBlock.data
 
   // const defaultBlock = props.data.prismic.allBlocks.edges[0].node
@@ -242,7 +256,7 @@ export default Post
 
 export const postQuery = graphql`
   query pressListQuery($skip: Int!, $limit: Int!) {
-    press: allPrismicPress(limit: $limit, skip: $skip) {
+    press: allPrismicPres(limit: $limit, skip: $skip) {
       nodes {
         uid
         data {
@@ -268,7 +282,7 @@ export const postQuery = graphql`
         }
       }
     }
-    blogbg: file(relativePath: { eq: "defaultheader.png" }) {
+    blogbg: file(relativePath: { eq: "Pageheader.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -293,11 +307,39 @@ export const postQuery = graphql`
         }
       }
     }
-    defaultBlock: prismicBlocks(
-      id: { eq: "48b37aa4-1796-5b39-bea6-1df89eeb303e" }
-    ) {
+    defaultBlock: prismicBlocks(uid: { eq: "global-contact" }) {
       data {
         body {
+          ... on PrismicBlocksBodyColumnsSection {
+            id
+            slice_type
+            primary {
+              background_color
+              slice_id {
+                text
+              }
+              background_image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1920) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+              column_count
+              font_color
+              h1_title
+              section_title {
+                text
+              }
+            }
+            items {
+              content {
+                raw
+              }
+            }
+          }
           ... on PrismicBlocksBodyBasicSection {
             id
             slice_type

@@ -8,7 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
           uid
         }
       }
-      press: allPrismicPress {
+      press: allPrismicPres {
         nodes {
           uid
         }

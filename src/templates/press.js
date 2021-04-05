@@ -256,6 +256,7 @@ const Post = props => {
   const node = props.data.page.data
   const site = props.data.site
   const defaultBlock = props.data.defaultBlock.data
+  console.log(props)
   // const defaultBlock = props.data.prismic.allBlocks.edges[0].node
   // const site = props.data.prismic.allSite_informations.edges[0].node
   const shareUrl =
@@ -325,9 +326,7 @@ export default Post
 
 export const postQuery = graphql`
   query PressBySlug($uid: String!) {
-    defaultBlock: prismicBlocks(
-      id: { eq: "48b37aa4-1796-5b39-bea6-1df89eeb303e" }
-    ) {
+    defaultBlock: prismicBlocks(uid: { eq: "global-contact" }) {
       data {
         body {
           ... on PrismicBlocksBodyBasicSection {
@@ -377,7 +376,7 @@ export const postQuery = graphql`
         }
       }
     }
-    blogbg: file(relativePath: { eq: "defaultheader.png" }) {
+    blogbg: file(relativePath: { eq: "Pageheader.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -402,7 +401,7 @@ export const postQuery = graphql`
         }
       }
     }
-    page: prismicPress(uid: { eq: $uid }) {
+    page: prismicPres(uid: { eq: $uid }) {
       uid
       type
       data {
@@ -433,7 +432,7 @@ export const postQuery = graphql`
           }
         }
         body {
-          ... on PrismicPressBodyVideo {
+          ... on PrismicPresBodyVideo {
             slice_type
             id
             primary {
@@ -442,7 +441,7 @@ export const postQuery = graphql`
               }
             }
           }
-          ... on PrismicPressBodyImage {
+          ... on PrismicPresBodyImage {
             slice_type
             id
             primary {
@@ -457,7 +456,7 @@ export const postQuery = graphql`
               }
             }
           }
-          ... on PrismicPressBodyText {
+          ... on PrismicPresBodyText {
             slice_type
             id
             primary {

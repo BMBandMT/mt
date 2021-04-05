@@ -59,9 +59,8 @@ module.exports = {
           blog_post: require("./src/schemas/blog_post.json"),
           site_information: require("./src/schemas/site_information.json"),
           blocks: require("./src/schemas/blocks.json"),
-          press: require("./src/schemas/press.json"),
+          pres: require("./src/schemas/pres.json"),
         },
-        prismicToolbar: false,
       },
     },
     {
