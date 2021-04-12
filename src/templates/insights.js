@@ -193,8 +193,6 @@ const Post = props => {
   var min_height = 350
   const defaultBlock = props.data.defaultBlock.data
 
-  console.log(defaultBlock)
-
   // const defaultBlock = props.data.prismic.allBlocks.edges[0].node
   // const site = props.data.prismic.allSite_informations.edges[0].node
   const { currentPage, numPages } = props.pageContext

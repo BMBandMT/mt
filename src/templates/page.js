@@ -19,6 +19,9 @@ const PostSlices = ({ slices, blog }) => {
       if (slice.primary.slice_id != undefined) {
         var sliceID = slice.primary.slice_id.text
       }
+      if (slice.primary.id != undefined) {
+        var sliceID = slice.primary.id.text
+      }
     }
     const res = (() => {
       switch (slice.slice_type) {
@@ -33,6 +36,20 @@ const PostSlices = ({ slices, blog }) => {
               className="slice-wrapper slice-basic"
             >
               {<BasicSectionSlice slice={slice} />}
+            </div>
+          )
+
+        case "animate_left_right":
+          const AnimateLeftRight = loadable(() =>
+            import(`../components/slices/AnimateLeftRight`)
+          )
+          return (
+            <div
+              id={"slice-id-" + sliceID}
+              key={index}
+              className="slice-wrapper slice-animate-left-right"
+            >
+              {<AnimateLeftRight slice={slice} />}
             </div>
           )
 
@@ -194,6 +211,45 @@ export const postQuery = graphql`
               }
               image_copy {
                 html
+              }
+            }
+          }
+          ... on PrismicPaBodyAnimateLeftRight {
+            id
+            slice_type
+            primary {
+              id {
+                text
+              }
+              left_copy {
+                raw
+              }
+              left_image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1920) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+              left_title {
+                text
+              }
+              right_copy {
+                raw
+              }
+              right_image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1920) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+              right_title {
+                text
               }
             }
           }

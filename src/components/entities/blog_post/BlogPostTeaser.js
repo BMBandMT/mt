@@ -44,10 +44,8 @@ const BlogPostTeaserStyle = styled.article`
   .gatsby-image-wrapper {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     &:before {
       background-size: cover;
-      border-radius: 10px;
     }
   }
 `

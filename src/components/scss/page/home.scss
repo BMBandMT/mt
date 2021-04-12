@@ -58,45 +58,68 @@
     }
   }
 }
-#slice-id-home-cost {
-  .column {
-    .column-item {
-      overflow: visible;
-    }
-    align-items: center;
-    .block-img {
-      max-width: 500px;
-      background-color: rgba(35, 164, 85, 0.5);
-      padding: 25px 0px;
+#slice-id-cultivation-costs{
+  .left{
+    width:calc(55% - 30px)
+  }
+  .right{
+    width:calc(45% - 30px)
+  }
+  .left-image{
+    max-width: 500px;
+    background-color: rgba(35, 164, 85, 0.5);
+    padding: 25px 0px;
+    position: relative;
+    // right: -65px;
+    .gatsby-image-wrapper{
       position: relative;
-      right: -65px;
-      img {
-        position: relative;
-        left: -65px;
-        height: auto;
-        display: block;
-      }
+      left: 65px;
+      height: auto;
+      display: block;
     }
   }
+
 }
-#slice-id-home-community {
-  .column {
-    .column-item {
-      overflow: visible;
-    }
-    align-items: center;
-    .block-img {
-      max-width: 500px;
-      background-color: rgba(35, 164, 85, 0.5);
-      padding: 25px 0px;
+#slice-id-home-cost {
+  margin:100px 0px;
+  .left{
+    width:calc(45% - 30px)
+  }
+  .right{
+    width:calc(55% - 30px)
+  }
+  .right-image{
+    max-width: 500px;
+    background-color: rgba(35, 164, 85, 0.5);
+    padding: 25px 0px;
+    position: relative;
+    // right: -65px;
+    .gatsby-image-wrapper{
       position: relative;
-      left: -65px;
-      img {
-        position: relative;
-        right: -65px;
-        height: auto;
-        display: block;
-      }
+      left: 65px;
+      height: auto;
+      display: block;
+    }
+  } 
+}
+#slice-id-home-partnership {
+  .left{
+    width:calc(55% - 30px)
+  }
+  .right{
+    width:calc(45% - 30px)
+  }
+  .left-image{
+    max-width: 500px;
+    background-color: rgba(35, 164, 85, 0.5);
+    padding: 25px 0px;
+    position: relative;
+    // right: -65px;
+    .gatsby-image-wrapper{
+      position: relative;
+      left: 65px;
+      height: auto;
+      display: block;
     }
   }
 }
@@ -130,5 +153,15 @@
     a {
       @include cta-button();
     }
+  }
+}
+
+#slice-id-home-insights{
+  padding:85px 0px;
+  h2.entity-section-header{
+    margin-top:0px;
+    width:100%;
+    text-align:center;
+    font-weight:500;
   }
 }

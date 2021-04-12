@@ -65,10 +65,14 @@ const HeaderStyle = styled.header`
           border-radius: 15px;
           &:hover {
             background: ${variable.green};
-            color: white;
+            color: white !important;
           }
           &[aria-current] {
-            color: white !important;
+            color: ${variable.green} !important;
+            &:hover {
+              background: ${variable.green};
+              color: white !important;
+            }
           }
         }
       }
