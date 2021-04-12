@@ -29,48 +29,89 @@ export const AnimateLeftRight = ({ slice }) => {
     <LeftRightStyle>
       <Container>
         <div className="left">
-          <ScrollAnimation
-            animateIn="animate__lightSpeedInLeft"
-            animateOnce={false}
-          >
-            {slice.primary.left_copy && (
-              <RichText
-                render={slice.primary.left_copy.raw}
-                linkResolver={linkResolver}
-                htmlSerializer={prismicHtmlSerializer}
-              // serializeHyperlink={myCustomLink}
-              />
-            )
-            }
-            {slice.primary.left_image.localFile && (
-              <div className="left-image">
+          {slice.primary.left_title && (
+            <ScrollAnimation
+              animateIn="animate__fadeIn"
+              delay={900}
+              animateOnce={false}
+            >
+              <div className="left-title">
+                <h2>{slice.primary.left_title.text}</h2>
+              </div>
+            </ScrollAnimation>
+          )}
+          {slice.primary.left_copy && (
+            <ScrollAnimation
+              animateIn="animate__fadeIn"
+              animateOnce={false}
+            >
+              <div className="left-copy">
+                <RichText
+                  render={slice.primary.left_copy.raw}
+                  linkResolver={linkResolver}
+                  htmlSerializer={prismicHtmlSerializer}
+                />
+              </div>
+            </ScrollAnimation>
+          )
+          }
+          {slice.primary.left_image.localFile && (
+            <div className="left-image">
+              <ScrollAnimation
+                animateIn="animate__slideInLeft"
+                animateOnce={false}
+              >
+                <div className="left-shadow"></div>
+              </ScrollAnimation>
+
+              <div className="left-image-inner">
                 <Img fluid={slice.primary.left_image.localFile.childImageSharp.fluid} />
               </div>
-            )
-            }
-          </ScrollAnimation>
+            </div>
+          )
+          }
         </div>
         <div className="right">
-          <ScrollAnimation
-            animateIn="animate__lightSpeedInRight"
-            animateOnce={false}
-          >
-            {slice.primary.right_copy && (
-              <RichText
-                render={slice.primary.right_copy.raw}
-                linkResolver={linkResolver}
-                htmlSerializer={prismicHtmlSerializer}
-              // serializeHyperlink={myCustomLink}
-              />
-            )
-            }
-            {slice.primary.right_image.localFile && (
-              <div className="right-image">
+          {slice.primary.right_title && (
+            <ScrollAnimation
+              animateIn="animate__fadeIn"
+              delay={900}
+              animateOnce={false}
+            >
+              <div className="right-title">
+                <h2>{slice.primary.right_title.text}</h2>
+              </div>
+            </ScrollAnimation>
+          )}
+          {slice.primary.right_copy && (
+            <ScrollAnimation
+              animateIn="animate__fadeIn"
+              animateOnce={false}
+            >
+              <div className="right-copy">
+                <RichText
+                  render={slice.primary.right_copy.raw}
+                  linkResolver={linkResolver}
+                  htmlSerializer={prismicHtmlSerializer}
+                />
+              </div>
+            </ScrollAnimation>
+          )
+          }
+          {slice.primary.right_image.localFile && (
+            <div className="right-image">
+              <ScrollAnimation
+                animateIn="animate__slideInRight"
+                animateOnce={false}
+              >
+                <div className="right-shadow"></div>
+              </ScrollAnimation>
+              <div className="right-image-inner">
                 <Img fluid={slice.primary.right_image.localFile.childImageSharp.fluid} />
               </div>
-            )
-            }
-          </ScrollAnimation>
+            </div>
+          )
+          }
         </div>
       </Container>
     </LeftRightStyle>
