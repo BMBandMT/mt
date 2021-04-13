@@ -81,19 +81,19 @@ const PostSlices = ({ slices, blog }) => {
             </div>
           )
 
-        // case "block_reference":
-        //   const BlockReferenceSlice = loadable(() =>
-        //     import(`../components/slices/BlockReferenceSlice`)
-        //   )
-        //   return (
-        //     <div
-        //       id={"slice-id-" + sliceID}
-        //       key={index}
-        //       className="slice-wrapper slice-block-reference"
-        //     >
-        //       {<BlockReferenceSlice slice={slice} />}
-        //     </div>
-        //   )
+        case "block_reference":
+          const BlockReferenceSlice = loadable(() =>
+            import(`../components/slices/BlockReferenceSlice`)
+          )
+          return (
+            <div
+              id={"slice-id-" + sliceID}
+              key={index}
+              className="slice-wrapper slice-block-reference"
+            >
+              {<BlockReferenceSlice slice={slice} />}
+            </div>
+          )
 
         case "entity_query":
           const EntityQuerySlice = loadable(() =>
@@ -223,6 +223,24 @@ export const postQuery = graphql`
               }
               left_copy {
                 raw
+              }
+              left_icon {
+                localFile {
+                  childImageSharp {
+                    fixed(width:41, height:41) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+              }
+              right_icon {
+                localFile {
+                  childImageSharp {
+                    fixed(width:41, height:41) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
               }
               left_image {
                 localFile {

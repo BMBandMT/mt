@@ -19,7 +19,24 @@ const LeftRightStyle = styled.div`
   }
   .right{
     width:calc(50% - 30px);
+    
   }
+}
+.right-title{
+  display:flex;
+  align-items:center;
+}
+.left-title{
+  display:flex;
+  align-items:center;
+}
+.left-icon{
+  border-radius:10px;
+  margin-right:10px;
+}
+.right-icon{
+  border-radius:10px;
+  margin-right:10px;
 }
 `
 
@@ -29,30 +46,23 @@ export const AnimateLeftRight = ({ slice }) => {
     <LeftRightStyle>
       <Container>
         <div className="left">
-          {slice.primary.left_title && (
-            <ScrollAnimation
-              animateIn="animate__fadeIn"
-              delay={900}
-              animateOnce={false}
-            >
-              <div className="left-title">
-                <h2>{slice.primary.left_title.text}</h2>
-              </div>
-            </ScrollAnimation>
+          {slice.primary.left_title.text && (
+            <div className="left-title">
+              {slice.primary.left_icon.localFile && (
+                <Img className="left-icon" fixed={slice.primary.left_icon.localFile.childImageSharp.fixed} />
+              )}
+
+              <h2>{slice.primary.left_title.text}</h2>
+            </div>
           )}
           {slice.primary.left_copy && (
-            <ScrollAnimation
-              animateIn="animate__fadeIn"
-              animateOnce={false}
-            >
-              <div className="left-copy">
-                <RichText
-                  render={slice.primary.left_copy.raw}
-                  linkResolver={linkResolver}
-                  htmlSerializer={prismicHtmlSerializer}
-                />
-              </div>
-            </ScrollAnimation>
+            <div className="left-copy">
+              <RichText
+                render={slice.primary.left_copy.raw}
+                linkResolver={linkResolver}
+                htmlSerializer={prismicHtmlSerializer}
+              />
+            </div>
           )
           }
           {slice.primary.left_image.localFile && (
@@ -72,30 +82,23 @@ export const AnimateLeftRight = ({ slice }) => {
           }
         </div>
         <div className="right">
-          {slice.primary.right_title && (
-            <ScrollAnimation
-              animateIn="animate__fadeIn"
-              delay={900}
-              animateOnce={false}
-            >
-              <div className="right-title">
-                <h2>{slice.primary.right_title.text}</h2>
-              </div>
-            </ScrollAnimation>
+          {slice.primary.right_title.text && (
+            <div className="right-title">
+              {slice.primary.right_icon.localFile && (
+                <Img className="right-icon" fixed={slice.primary.right_icon.localFile.childImageSharp.fixed} />
+              )}
+              <h2>{slice.primary.right_title.text}</h2>
+            </div>
           )}
           {slice.primary.right_copy && (
-            <ScrollAnimation
-              animateIn="animate__fadeIn"
-              animateOnce={false}
-            >
-              <div className="right-copy">
-                <RichText
-                  render={slice.primary.right_copy.raw}
-                  linkResolver={linkResolver}
-                  htmlSerializer={prismicHtmlSerializer}
-                />
-              </div>
-            </ScrollAnimation>
+
+            <div className="right-copy">
+              <RichText
+                render={slice.primary.right_copy.raw}
+                linkResolver={linkResolver}
+                htmlSerializer={prismicHtmlSerializer}
+              />
+            </div>
           )
           }
           {slice.primary.right_image.localFile && (

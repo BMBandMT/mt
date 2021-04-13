@@ -95,11 +95,13 @@ function ColumnsSectionSlice({ slice }) {
                   {items &&
                     items.map((item, index) => (
                       <div key={index} className="column-item">
-                        <RichText
-                          render={item.content.raw}
-                          linkResolver={linkResolver}
-                          htmlSerializer={prismicHtmlSerializer}
-                        />
+                        <div className="column-item-inner">
+                          <RichText
+                            render={item.content.raw}
+                            linkResolver={linkResolver}
+                            htmlSerializer={prismicHtmlSerializer}
+                          />
+                        </div>
                       </div>
                     ))}
                 </div>
@@ -113,25 +115,22 @@ function ColumnsSectionSlice({ slice }) {
           style={{ backgroundColor: slice.primary.background_color }}
         >
           <Container>
-            <ScrollAnimation
-              animateIn="animate__zoomInLeft"
-              animateOnce={false}
-            >
-              <section>
-                <div className={"column column-count-" + columnCount}>
-                  {items &&
-                    items.map((item, index) => (
-                      <div key={index} className="column-item">
+            <section>
+              <div className={"column column-count-" + columnCount}>
+                {items &&
+                  items.map((item, index) => (
+                    <div key={index} className="column-item">
+                      <div className="column-item-inner">
                         <RichText
                           render={item.content.raw}
                           linkResolver={linkResolver}
                           htmlSerializer={prismicHtmlSerializer}
                         />
                       </div>
-                    ))}
-                </div>
-              </section>
-            </ScrollAnimation>
+                    </div>
+                  ))}
+              </div>
+            </section>
           </Container>
         </ColumnStyle>
       )}

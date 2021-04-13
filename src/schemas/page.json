@@ -498,6 +498,14 @@
                   "label": "Left Title"
                 }
               },
+              "left_icon": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Left Icon"
+                }
+              },
               "left_copy": {
                 "type": "StructuredText",
                 "config": {
@@ -518,6 +526,14 @@
                 "config": {
                   "single": "heading2",
                   "label": "Right Title"
+                }
+              },
+              "right_icon": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Right Icon"
                 }
               },
               "right_copy": {
