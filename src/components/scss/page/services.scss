@@ -4,6 +4,11 @@
     .section-content{
         max-width:1000px;
         margin:0 auto;
+        p{
+            font-weight:300;
+            font-size:18px;
+            line-height:27px;
+        }
     }
     
 }
@@ -117,13 +122,13 @@
 }
 
 #slice-id-service-column{
-    padding:100px 0px;
+    padding:100px 0px 50px 0px;
     .column{
         display:flex;
         flex-wrap:wrap;
         justify-content:space-around;
         .column-item{
-            width:50%;
+            width:auto !important;
             .column-item-inner{
                 max-width:400px;
                 text-align:center;
@@ -134,3 +139,15 @@
         }
     }
 }
+
+#slice-id-services-learn-more{
+    section {
+      padding: 0px 0px 50px 0px;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      a {
+        @include cta-button();
+      }
+    }
+  }
