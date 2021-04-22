@@ -65,3 +65,97 @@
         }
       }
 }
+
+
+#slice-id-about-benefits{
+    padding-top:50px;
+    .left-image-inner{
+        img{
+            border-radius:10px;
+        }
+    }
+    .left{
+        width:calc(40% - 30px)
+      }
+      .right{
+        width:calc(55% - 30px)
+      }
+      .left-image{
+        position:relative;
+        .left-shadow{
+          background-color: rgba(35, 164, 85, 0.5);
+          position:absolute;
+          height:211px;
+          right:-50px;
+          width:100%;
+        }
+        .gatsby-image-wrapper{
+          position: relative;
+        //   right: 65px;
+          height: auto;
+          display: block;
+        }
+      }
+}
+
+#slice-id-about-medical{
+    padding:50px 0px;
+    .left-image-inner{
+        img{
+            border-radius:10px;
+        }
+    }
+    .left{
+        width:calc(55% - 30px)
+      }
+      .right{
+        width:calc(40% - 30px)
+      }
+      .right-image{
+        position:relative;
+        .right-shadow{
+          background-color: rgba(35, 164, 85, 0.5);
+          position:absolute;
+          height:211px;
+          left:-50px;
+          width:100%;
+        }
+        .gatsby-image-wrapper{
+          position: relative;
+        //   right: 65px;
+          height: auto;
+          display: block;
+        }
+      }
+}
+
+#slice-id-about-recreational{
+    padding-top:50px;
+    .left-image-inner{
+        img{
+            border-radius:10px;
+        }
+    }
+    .left{
+        width:calc(40% - 30px)
+      }
+      .right{
+        width:calc(55% - 30px)
+      }
+      .left-image{
+        position:relative;
+        .left-shadow{
+          background-color: rgba(35, 164, 85, 0.5);
+          position:absolute;
+          height:211px;
+          right:-50px;
+          width:100%;
+        }
+        .gatsby-image-wrapper{
+          position: relative;
+        //   right: 65px;
+          height: auto;
+          display: block;
+        }
+      }
+}

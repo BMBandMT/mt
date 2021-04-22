@@ -150,7 +150,6 @@ const PageStyle = styled.div`
     overflow: hidden;
   }
   .release-date {
-    margin-bottom: 10px;
     font-weight: 300;
     font-size: 17px;
   }
@@ -179,12 +178,13 @@ const PageStyle = styled.div`
   .date-share {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 35px;
     margin-top: 45px;
     .blue-share {
       display: flex;
+      align-items:center;
       flex-wrap: wrap;
       justify-content: space-between;
       width: 135px;
@@ -298,6 +298,9 @@ const Post = props => {
                 )}
               </div>
               <div className="date-share">
+                {node.release_date && (
+                  <div className="release-date">{node.release_date}</div>
+                )}
                 <div className="blue-share">
                   <div className="blue-share-text">Share:</div>
                   <FacebookShareButton url={shareUrl}>
@@ -311,9 +314,7 @@ const Post = props => {
                   </TwitterShareButton>
                 </div>
               </div>
-              {node.release_date && (
-                <div className="release-date">{node.release_date}</div>
-              )}
+
               <h1>{node.title.text}</h1>
               <div class="press-by-line">By: {node.author.text}</div>
               <div class="read-article">

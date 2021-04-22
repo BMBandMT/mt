@@ -59,26 +59,24 @@
   }
 }
 #slice-id-cultivation-costs{
+  h2{
+    margin:0px;
+  }
   .left{
-    width:calc(55% - 30px)
+    width:calc(48%)
   }
   .right{
-    width:calc(40% - 30px)
+    width:calc(40%)
   }
   .left-image{
     position:relative;
     .left-shadow{
       background-color: rgba(35, 164, 85, 0.5);
       position:absolute;
-      height:408px;
+      height:380px;
       top:-30px;
       width:100%;
     }
-    // max-width: 500px;
-    
-    // padding: 25px 0px;
-    // position: relative;
-    // right: -65px;
     .gatsby-image-wrapper{
       position: relative;
       left: 65px;
@@ -90,17 +88,20 @@
 }
 #slice-id-home-cost {
   margin:100px 0px;
+  h2{
+    margin:0px;
+  }
   .left{
-    width:calc(40% - 30px)
+    width:calc(40%)
   }
   .right{
-    width:calc(55% - 30px)
+    width:calc(48%)
   }
   .right-image{
     .right-shadow{
       background-color: rgba(35, 164, 85, 0.5);
       position:absolute;
-      height:408px;
+      height:380px;
       top:-30px;
       width:100%;
     }
@@ -118,17 +119,20 @@
   } 
 }
 #slice-id-home-partnership {
+  h2{
+    margin:0px;
+  }
   .left{
-    width:calc(55% - 30px)
+    width:calc(48%)
   }
   .right{
-    width:calc(40% - 30px)
+    width:calc(40%)
   }
   .left-image{
     .left-shadow{
       background-color: rgba(35, 164, 85, 0.5);
       position:absolute;
-      height:408px;
+      height:380px;
       top:-30px;
       width:100%;
     }

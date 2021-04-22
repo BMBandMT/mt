@@ -14,7 +14,10 @@
 }
 #slice-id-cultivation{
     background-color:rgba(35, 164, 85, 0.15);
-    padding-top:50px;
+    padding-top:100px;
+    h2{
+      margin:0px;
+    }
     .left-image-inner{
         img{
             border-radius:10px;
@@ -51,7 +54,10 @@
 }
 #slice-id-chain-solutions{
     background-color:rgba(35, 164, 85, 0.15);
-    padding:50px 0px;
+    padding:100px 0px;
+    h2{
+      margin:0px;
+    }
     .right-image-inner{
         img{
             border-radius:10px;
@@ -86,7 +92,10 @@
 }
 #slice-id-services-development{
     background-color:rgba(35, 164, 85, 0.15);
-    padding-bottom:50px;
+    padding-bottom:100px;
+    h2{
+      margin:0px;
+    }
     .left-image-inner{
         img{
             border-radius:10px;
@@ -129,9 +138,16 @@
         justify-content:space-around;
         .column-item{
             width:auto !important;
+            &:nth-child(3){
+              margin-top:60px;
+            }
             .column-item-inner{
                 max-width:400px;
                 text-align:center;
+                border-top:40px solid rgba(35, 164, 85, 0.45);
+                p.block-img{
+                  margin-top:0px;
+                }
                 img{
                     height:auto;
                 }
