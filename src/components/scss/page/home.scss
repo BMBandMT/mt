@@ -61,6 +61,9 @@
 #slice-id-cultivation-costs{
   h2{
     margin:0px;
+    @include mobile(){
+      margin-top:20px;
+    }
   }
   .left{
     width:calc(48%)
@@ -88,8 +91,19 @@
 }
 #slice-id-home-cost {
   margin:100px 0px;
+  @include mobile(){
+    margin:50px 0px;
+    > div{
+      > div{
+        flex-direction:column-reverse;
+      }
+    }
+  }
   h2{
     margin:0px;
+    @include mobile(){
+      margin-top:20px;
+    }
   }
   .left{
     width:calc(40%)
@@ -121,6 +135,9 @@
 #slice-id-home-partnership {
   h2{
     margin:0px;
+    @include mobile(){
+      margin-top:20px;
+    }
   }
   .left{
     width:calc(48%)

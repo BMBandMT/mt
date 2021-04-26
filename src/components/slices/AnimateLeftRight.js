@@ -8,27 +8,69 @@ import prismicHtmlSerializer from "../../gatsby/htmlSerializer"
 import Img from "gatsby-image"
 import "animate.css/animate.min.css"
 import ScrollAnimation from "react-animate-on-scroll"
+import * as variable from "../variables"
+
 const LeftRightStyle = styled.div`
 > div{
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
   align-items:center;
+  @media (max-width: ${variable.mobileWidth}) {
+    flex-direction:column;
+  }
   .left{
     width:calc(50% - 30px);
+    @media (max-width: ${variable.mobileWidth}) {
+      width:100% !important;
+      .left-shadow{
+        display:none !important;
+      }
+      .right-shadow{
+        display:none !important;
+      }
+      .gatsby-image-wrapper{
+        left:unset !important;
+        right:unset !important;
+      }
+    }
   }
   .right{
     width:calc(50% - 30px);
-    
+    @media (max-width: ${variable.mobileWidth}) {
+      width:100% !important;
+      .left-shadow{
+        display:none !important;
+      }
+      .right-shadow{
+        display:none !important;
+      }
+      .gatsby-image-wrapper{
+        left:unset !important;
+        right:unset !important;
+      }
+    }
   }
 }
 .right-title{
   display:flex;
   align-items:center;
+  @media (max-width: ${variable.mobileWidth}) {
+    margin-top:20px;
+    h2{
+      margin:0px;
+    }
+  }
 }
 .left-title{
   display:flex;
   align-items:center;
+  @media (max-width: ${variable.mobileWidth}) {
+    margin-top:20px;
+    h2{
+      margin:0px;
+    }
+  }
 }
 .left-icon{
   border-radius:10px;

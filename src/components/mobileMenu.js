@@ -6,6 +6,11 @@ import styled from "styled-components"
 import * as variable from "../components/variables"
 
 const MobileContainer = styled.div`
+.menu-container {
+  span{
+    background-color:white;
+  }
+}
   display: none;
   position: relative;
   height: 30px;
@@ -105,17 +110,18 @@ const MenuToggle = styled.div`
   top: ${props => (props.open ? "28px" : "auto")};
   right: ${props => (props.open ? "20px" : "auto")};
   span {
+    box-shadow: 0px 3px #000000;
     display: block;
     position: absolute;
     height: 7px;
     width: 100%;
-    background: ${variable.darkBlue};
+    background: white;
     border-radius: 10px;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
     transition: ${props =>
-      props.open ? "all 0.25s ease-in" : "all 0.25s ease-out"};
+    props.open ? "all 0.25s ease-in" : "all 0.25s ease-out"};
   }
   span:nth-child(1) {
     top: ${props => (props.open ? "calc(50% - 3.5px)" : "10%")};
@@ -285,7 +291,9 @@ class Mobilemenu extends React.Component {
           }
         `}
         render={data => (
+
           <>
+            {console.log(data)}
             <div id="mobile-menu-header">
               <div classnName="menu-container">
                 <MenuToggle
@@ -316,7 +324,7 @@ class Mobilemenu extends React.Component {
                   {data.allPrismicSiteInformation.nodes[0].data.nav.map(
                     (menuitem, index) => (
                       <li key={menuitem.id}>
-                        {menuitem.primary.link.id && (
+                        {menuitem.primary.link.url && (
                           <Link
                             activeStyle={{ color: variable.darkgray }}
                             to={menuitem.primary.link.url}
@@ -327,7 +335,7 @@ class Mobilemenu extends React.Component {
                             {menuitem.primary.label.text}
                           </Link>
                         )}
-                        {!menuitem.primary.link.id && (
+                        {!menuitem.primary.link.url && (
                           <Link
                             activeStyle={{ color: variable.darkgray }}
                             to={menuitem.primary.relative_link.text}

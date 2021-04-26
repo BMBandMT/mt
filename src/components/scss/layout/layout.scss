@@ -53,6 +53,9 @@ h2 {
     .column-item {
       &:nth-child(2) {
         text-align: right;
+        @include mobile(){
+          text-align:left;
+        }
         a {
           background-color: white;
           color: $green;

@@ -55,6 +55,14 @@
 #slice-id-chain-solutions{
     background-color:rgba(35, 164, 85, 0.15);
     padding:100px 0px;
+    @include mobile(){
+      > div{
+        > div{
+          flex-direction:column-reverse;
+        }
+      }
+      padding:50px 0px;
+    }
     h2{
       margin:0px;
     }

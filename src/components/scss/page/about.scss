@@ -21,12 +21,30 @@
        align-items:center;
        max-width: 1000px;
        margin: 0 auto;
+       @include mobile(){
+         flex-direction:column-reverse;
+       }
        .column-item{
         &:nth-child(1){
             width:calc(65% - 50px);
+            @include mobile(){
+              width:100%;
+              text-align:center;
+            }
         }
         &:nth-child(2){
             width:calc(35% - 50px);
+            @include mobile(){
+              margin:0px;
+              width:100%;
+              .block-img{
+                img{
+                  max-width:200px;
+                  margin:0 auto;
+                  display:block;
+                }
+              }
+            }
         }
            img{
                height:auto;
@@ -100,6 +118,13 @@
 
 #slice-id-about-medical{
     padding:50px 0px;
+    @include mobile(){
+      > div{
+        > div{
+          flex-direction: column-reverse;
+        }
+      }
+    }
     .left-image-inner{
         img{
             border-radius:10px;
@@ -131,6 +156,9 @@
 
 #slice-id-about-recreational{
     padding-top:50px;
+    @include mobile(){
+      padding-top:0px;
+    }
     .left-image-inner{
         img{
             border-radius:10px;
