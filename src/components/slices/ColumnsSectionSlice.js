@@ -18,7 +18,7 @@ const ColumnStyle = styled.div`
     }
     .column-item {
       border-radius: 4px;
-      overflow: hidden;
+      position:relative;
     }
   }
   .column-count-2 {
@@ -58,6 +58,15 @@ const ColumnStyle = styled.div`
       width: 100% !important;
       margin-bottom: 20px;
     }
+  }
+  .column-shadow{
+    background-color: rgba(35, 164, 85, 0.50);
+    position:absolute;
+    height:200px;
+    top:-30px;
+    width:100%;
+    animation: slideInDown; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
   }
 `
 
@@ -121,6 +130,12 @@ function ColumnsSectionSlice({ slice }) {
                   items.map((item, index) => (
                     <div key={index} className="column-item">
                       <div className="column-item-inner">
+                        <ScrollAnimation
+                          animateIn="animate__fadeInDownBig"
+                          animateOnce={false}
+                        >
+                          <div className="column-shadow"></div>
+                        </ScrollAnimation>
                         <RichText
                           render={item.content.raw}
                           linkResolver={linkResolver}

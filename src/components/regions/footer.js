@@ -192,7 +192,7 @@ export const Footer = () => {
       <div class="footer-border"></div>
       <Container className="footer-container-below">
         <div class="footer-under-container">
-          &copy; {new Date().getFullYear()} Blue Mountain Best | All Rights
+          &copy; {new Date().getFullYear()} Massive Therapeutics | All Rights
           Reserved
         </div>
       </Container>

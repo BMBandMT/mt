@@ -298,7 +298,7 @@ export const postQuery = graphql`
                             background_image {
                               localFile {
                                 childImageSharp {
-                                  fluid(maxWidth: 1920) {
+                                  fluid(maxWidth: 3840) {
                                     ...GatsbyImageSharpFluid
                                   }
                                 }
@@ -346,7 +346,7 @@ export const postQuery = graphql`
                     }
                   }
                   desktop: childImageSharp {
-                    fluid(quality: 90, maxWidth: 1920) {
+                    fluid(quality: 100, maxWidth: 3840) {
                       ...GatsbyImageSharpFluid_withWebp_tracedSVG
                     }
                   }
@@ -380,7 +380,7 @@ export const postQuery = graphql`
               background_image {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 1920) {
+                    fluid(maxWidth: 3840) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -408,7 +408,7 @@ export const postQuery = graphql`
                             background_image {
                               localFile {
                                 childImageSharp {
-                                  fluid(maxWidth: 1920) {
+                                  fluid(maxWidth: 3840) {
                                     ...GatsbyImageSharpFluid
                                   }
                                 }
@@ -445,7 +445,7 @@ export const postQuery = graphql`
                                   }
                                 }
                                 desktop: childImageSharp {
-                                  fluid(quality: 90, maxWidth: 1920) {
+                                  fluid(quality: 100, maxWidth: 3840) {
                                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                                   }
                                 }
@@ -485,7 +485,7 @@ export const postQuery = graphql`
                                           background_image {
                                             localFile {
                                               childImageSharp {
-                                                fluid(maxWidth: 1920) {
+                                                fluid(maxWidth: 3840) {
                                                   ...GatsbyImageSharpFluid
                                                 }
                                               }
@@ -581,7 +581,7 @@ export const postQuery = graphql`
               background_image {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 1920) {
+                    fluid(maxWidth: 3840) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -610,7 +610,7 @@ export const postQuery = graphql`
               background_image {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 1920) {
+                    fluid(maxWidth: 3840) {
                       ...GatsbyImageSharpFluid
                     }
                   }

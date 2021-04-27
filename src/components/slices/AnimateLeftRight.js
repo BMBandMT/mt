@@ -16,6 +16,9 @@ const LeftRightStyle = styled.div`
   flex-wrap:wrap;
   justify-content:space-between;
   align-items:center;
+  p{
+    margin:11px 0px;
+  }
   @media (max-width: ${variable.mobileWidth}) {
     flex-direction:column;
   }
@@ -55,6 +58,9 @@ const LeftRightStyle = styled.div`
 .right-title{
   display:flex;
   align-items:center;
+  h2{
+    margin:0px;
+  }
   @media (max-width: ${variable.mobileWidth}) {
     margin-top:20px;
     h2{
@@ -65,6 +71,9 @@ const LeftRightStyle = styled.div`
 .left-title{
   display:flex;
   align-items:center;
+  h2{
+    margin:0px;
+  }
   @media (max-width: ${variable.mobileWidth}) {
     margin-top:20px;
     h2{
