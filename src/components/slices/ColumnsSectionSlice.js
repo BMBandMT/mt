@@ -59,6 +59,14 @@ const ColumnStyle = styled.div`
       margin-bottom: 20px;
     }
   }
+  .animated{
+    z-index:2;
+    position:relative;
+  }
+  p{
+    z-index:3;
+    position:relative;
+  }
   .column-shadow{
     background-color: rgba(35, 164, 85, 0.50);
     position:absolute;
