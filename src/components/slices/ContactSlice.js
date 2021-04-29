@@ -132,9 +132,7 @@ export const ContactSlice = ({ slice }) => {
         <div className="contact-outer">
           <div className="contact-form-left">
             <p>
-              If you’re a coffee buyer, trader or roaster seeking a producer in
-              Jamaica, or an investor interested in exclusive Blue Mountain
-              coffee production, reach out.
+              If you’re a cannabis company seeking a supplier or an investor looking to enter the cannabis market, send us a message to get in touch.
             </p>
             <form
               name="contact"
@@ -174,16 +172,16 @@ export const ContactSlice = ({ slice }) => {
           </div>
           <div className="contact-form-right">
             <div className="contact-phone">
-              <a href="tel:1.307.201.9965">1.307.201.9965</a>
+              <a href="tel:905.581.3114">905.581.3114</a>
             </div>
             <div className="contact-email">
               <a href="mailto:marie.leblanc@massivebluemountain.com">
-                contact@bluemountainbest.com
+                contact@massivetherapeutics.com
               </a>
             </div>
             <div className="contact-address">
-              <div>Blue Mountain Best</div>
-              <div>Sheridan, Wyoming</div>
+              <div>Massive Therapeutics</div>
+              <div>Toronto, Canada</div>
               <div>Kingston, Jamaica</div>
             </div>
           </div>
