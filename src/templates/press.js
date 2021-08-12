@@ -263,7 +263,6 @@ const BlogHeader = styled.div`
     content: "";
   }
 `
-
 const Post = props => {
   // const prismicContent = props.data.prismic.allBlog_posts.edges[0]
   // if (!prismicContent) return null
