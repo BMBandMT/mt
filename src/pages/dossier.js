@@ -7,6 +7,10 @@ import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 const HeroStyle = styled.div`
   height: 100%;
+  p,
+  h2 {
+    color: #000000;
+  }
   header {
     /* display: none; */
   }
