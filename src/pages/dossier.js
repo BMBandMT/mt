@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 const HeroStyle = styled.div`
   height: 100%;
+  text-align: justify;
   p,
   h2 {
     color: #000000;
