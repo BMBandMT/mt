@@ -71,92 +71,40 @@ class Conf extends Component {
           >
             <Container className="conf-inner">
               <div className="conf-inner-inner">
-                <h2>Executive Summary </h2>
+                <h2>Executive Summary</h2>
                 <p>
-                  Blue Mountain Best is a commercial grower, processor and
-                  exporter of Jamaican Blue Mountain coffee. Allowing luxury
-                  coffee companies to directly source certified Blue Mountain
-                  beans from our single estate—as well as from hundreds of
-                  partner family farms, to whom we commit high-paying farmgate
-                  prices, as well needed extension services—Blue Mountain Best
-                  enters the historic Jamaican coffee market as a modern,
-                  equitable and sustainable coffee producer best suited to
-                  increase production and pursue worldwide retail growth for
-                  this historic and rare luxury product.{" "}
+                  Massive Therapeutics is a Jamaica-based cannabis producer poised to leverage upcoming Jamaican export agreements to become a highly profitable global supplier of medical and legal adult-use cannabis. With over 20 years of agricultural partnerships in Jamaica’s Blue Mountains, Massive Therapeutics aims to establish licensed production in Jamaica to cultivate, process and distribute cannabis to a client base of global cannabis companies and pharmaceutical organizations, considerably reducing these companies’ supply chain costs.
                 </p>
                 <p>
-                  Certified Jamaican Blue Mountain beans, which retain a
-                  protected status in the region, earn the world’s highest
-                  unitvvalue for their export. Where the average global export
-                  price for Arabica coffee hovers around $4 per
-                  kilogram, Jamaican Blue Mountain beans command an average unit
-                  price of roughly $22-$35 for the same quantity. At market,
-                  Jamaican Blue Mountain coffee consistently retails over $100
-                  per pound, retaining an indestructible reputation as the most
-                  sought after coffee in the world.{" "}
+                  Where a North American licensed producer of cannabis will spend roughly $400 to cultivate one pound of medical-grade cannabis, Massive Therapeutics can produce the same amount for just over $100. Backdropped by upcoming Jamaican cannabis export legislation, Massive Therapeutics begins its Jamaican operations best positioned to leverage Jamaica’s economy, production potential, and strategic export regime to supply the global industry.
                 </p>
-                <h2>Shareholder Structure </h2>
+                <h2>Shareholder Structure</h2>
                 <p>
-                  Blue Mountain Best is incorporated as a C-Corporation in the
-                  state of Wyoming. Out of 10,000,000 issued shares, Blue
-                  Mountain Best will offer 2,500,000 shares to investors at $1
-                  each, capping any dilution in company stock.{" "}
+                  Massive Therapeutics is incorporated in Kingston, Jamaica. Out of 10,000,000 issued shares, Massive Therapeutics will offer 2,500,000 shares to investors at $1 each, capping any dilution in company stock.
                 </p>
                 <h2>
-                  Acreage Structure, Syndication, Production and Processing{" "}
+                  Greenhouse Structure, Syndication, and Production
                 </h2>
                 <p>
-                  Blue Mountain Best will operate an estate in Jamaica sized
-                  over 1,050 acres, with 550 acres dedicated to certified Blue
-                  Mountain coffee production. 50 of Blue Mountain Best’s acres
-                  will be retained corporately, and 500 will be offered for
-                  joint-venture partnership.{" "}
+                  Massive Therapeutics will operate 50 modern hybrid greenhouses on its Jamaican estate, retaining 2 greenhouses corporately and offering 48 for joint venture partnership. Specifically, Massive Therapeutics’ will offer its greenhouses for syndication with cannabis and pharmaceutical companies in need of low-cost supply. Doing so will allow countless global cannabis companies, strained by chronic supply fragmentation and high costs, the opportunity to integrate with a cost-friendly supplier outside their jurisdiction. Joint venture opportunities are also available to financial syndicates interested in investing in and profit-sharing with large-scale cannabis cultivation.
                 </p>
                 <p>
-                  Specifically, Blue Mountain Best will offer its acres for
-                  syndication with coffee importing associations, traders,
-                  luxury buyers, and roasters seeking entrance into the
-                  sought-after Jamaican coffee market and integration with a
-                  sustainable Blue Mountain coffee producer. Joint venture
-                  opportunities are also available to financial syndicates
-                  interested in investing in and profit-sharing with luxury
-                  coffee production.{" "}
+                  Operating at full production, Massive Therapeutics conservatively estimates 50 modern hybrid greenhouses to produce over 23 million grams of medical-grade cannabis flower per year.
+                </p>
+                <h2>Total Revenues</h2>
+                <p>
+                  Sold conservatively at a wholesale price of $2/gram—roughly 30% the cannabis price index in North America—Massive Therapeutics expects a yearly revenue of over $46.5 million with 50 fully operational hybrid greenhouses per year.
+                </p>
+                <h2>Earnings Per Share</h2>
+                <p>
+                  Considering a 50% profit share in revenues from 48 greenhouses, as well as total revenues from Massive Therapeutics’ two corporate greenhouses, shareholders can expect Massive Therapeutics to return an earnings per share (EPS) of $4.65 each year.
+                </p>
+                <h2>Growth Potential</h2>
+                <p>
+                  The global cannabis market is among the fastest growing industries in the world. In 2020, the US market topped $16 billion, and the European market is expected to value $147 billion by 2028. Massive Therapeutics is able to solve high supply chain costs for cannabis companies across this global market, particularly in burgeoning European jurisdictions. The relative fact that 50 greenhouses can quickly be consumed by any number of these companies remains our most salient market consideration.
                 </p>
                 <p>
-                  In addition to its own production, Blue Mountain Best will
-                  source and process Jamaican Blue Mountain coffee from a
-                  network of over 400-500 small family farms.{" "}
-                </p>
-                <h2>Wholesale Revenues </h2>
-                <p>
-                  Conservatively, Blue Mountain Best’s yearly wholesale revenue
-                  from exported certified Blue Mountain coffee will exceed $13
-                  million per year at full potential.{" "}
-                </p>
-                <h2>Earnings Per Share </h2>
-                <p>
-                  Considering a 50% profit share in revenue from 500 acres, as
-                  well as total revenues from Blue Mountain Best’s 50 corporate
-                  acres, stakeholders can expect Blue Mountain Best to return an
-                  earnings per share (EPS) of roughly $1.31 per year.{" "}
-                </p>
-                <h2>Growth and Retail Potential </h2>
-                <p>
-                  Blue Mountain Best’s financial projections are calibrated from
-                  the wholesale export of luxury Blue Mountain coffee, yet these
-                  conservative figures do not account for Blue Mountain Best’s
-                  status as a single estate producer. While our highest
-                  wholesale price figures at $15.90/pound, importers routinely
-                  pay upwards of $27/pound for single origin certified Blue
-                  Mountain coffee.{" "}
-                </p>
-                <p>
-                  In addition, with opportunity and interest to market directly
-                  to the consumer, $13 million per year in wholesale revenue,
-                  taken from over 850,000 pounds of exportable Blue Mountain
-                  coffee, could quickly become over $80 million in yearly retail
-                  revenue, dwarfing the projected profits in this business
-                  model.
+                  Further, while Massive Therapeutics’ financial projections are calibrated for a wholesale cannabis price of $2/gram, even doubling this sale price would still undercut North American cannabis prices by over 30%. With the opportunity to extend into direct-to-market business and retail operations, Massive Therapeutics’ revenues represent a fraction of our growth potential.
                 </p>
               </div>
             </Container>
